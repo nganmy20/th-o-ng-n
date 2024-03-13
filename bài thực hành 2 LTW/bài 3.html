@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Liên hệ</title>
+    <style>
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+        }
+
+        .company-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .recipient-info {
+            flex:2 ;
+        }
+      input[type="text"]{
+            width: 800px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="nội dung"] {
+            width: 800px;
+            padding: 70px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          text-align: left;
+        }
+      .button {
+  background-color: #339999; 
+  border: none; 
+  color: white; 
+  padding: 10px 20px;
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+}
+.button:hover {
+  background-color: #45a049; 
+}
+    </style>
+</head>
+<body>
+  <span style="font-size: 28px; color: red; font-weight: bold">Bài 3.</span>
+  <p>
+    <span style="font-size:28px; color: #0066FF; font-weight: bold">Liên Hệ</span>
+  </p>
+    <div class="contact-container">
+        <div class="company-info">
+          <span style="font-size:18px; color:black; font-weight: bold"> Thông tin</span>
+            <p style="color:#777777; font-size: 14px; ">Kp.6,P.Linh Trung,Tp.Thủ Đức,Tp.HCM</p>
+            <p style="color:#777777; font-size: 14px; ">info@uit.edu.vn</p>
+            <p style="color:#777777; font-size: 14px; ">+84 28372 52002</p>
+        </div>
+        <div class="recipient-info">
+            <span style="font-size:18px; color: #CC33CC; font-weight: bold">Hãy liên hệ với chúng tôi bất cứ khi nào!!!</span>
+            <div class="input-group">
+            <input type="text" placeholder="Họ và tên" name="tên" required>
+              <input type="text" placeholder="Địa chỉ" name="đc" required>
+              <input type="text" placeholder="Tiêu đề bài viết" name="td" required>
+              <input type="nội dung" placeholder="Nội dung cần gửi" name="nd" required>
+        </div>
+          <button class="button">GỬI LỜI MỜI
+            <img width="18" src="https://cdn.glitch.global/520f3f66-fbfa-477d-b46d-7cc97c3aea79/d%E1%BA%A5u%20t%C3%ADch?v=1710068306570"/>
+          </button>
+        </div>
+    </div>
+</body>
+</html>
+

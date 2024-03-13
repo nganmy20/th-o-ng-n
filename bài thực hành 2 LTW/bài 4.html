@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tính chỉ số BMI</title>
+    <style>
+      body {
+            font-family: Arrial Narrow, sans-serif;
+        }
+        .container {
+            width: 300px;
+            height: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: inline-block;
+            width: 120px;
+        }
+      input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 120px;
+            padding: 5px;
+        }
+
+        .btn {
+            background-color:#33CCFF;
+            color: white;
+            padding: 8px 16px;
+            border: ;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <span style="font-size: 28px; color: red; font-weight: bold">Bài 4.</span>
+    <div class="container">
+        <span style="font-size: 24px; color: red; font-weight: bold">TÍNH CHỈ SỐ BMI</span>
+        <form action="#" method="post">
+            <div class="input-group">
+                <label for="input-name">Nhập số cân nặng:</label>
+                <input type="text" id="input-name" required>
+            </div>
+            <div class="input-group">
+                <label for="input-card">Nhập chiều cao:</label>
+                <input type="text" id="input-card" required>
+            </div>
+          <div class="input-group">
+                <label for="input-customer-type">Loại khách hàng:</label>
+                <select id="input-customer-type" required>
+                    <option value="">Chọn loại tuổi </option>
+                    <option value="vip">Già, lớn tuổi</option>
+                    <option value="regular">Trung niên</option>
+                    <option value="new">Trung niên, già lớn tuổi</option>
+                </select>
+            </div>
+          <div style="text-align: center">
+          <button class="btn" onclick="giaiPhuongTrinh()">Tính sô BMI</button>
+        <div class="result" id="result"></div>
+      <p>KẾT QUẢ</p>
+          </div>
+      </form>
+      </div>
+  <script>
+function calculateBMI() {
+    var weight = parseFloat(document.getElementById('weight').value);
+    var height = parseFloat(document.getElementById('height').value);
+    
+    var bmi = weight / (height * height);
+
+    var resultElement = document.getElementById('result');
+
+    if (bmi < 18) {
+        resultElement.innerHTML = 'Chỉ số BMI của bạn là ' + bmi.toFixed(2) + '. Dưới chuẩn.';
+    } else if (bmi >= 18 && bmi <= 25) {
+        resultElement.innerHTML = 'Chỉ số BMI của bạn là ' + bmi.toFixed(2) + '. Bình thường.';
+    } else if (bmi > 25 && bmi <= 29) {
+        resultElement.innerHTML = 'Chỉ số BMI của bạn là ' + bmi.toFixed(2) + '. Thừa cân.';
+    } else {
+        resultElement.innerHTML = 'Chỉ số BMI của bạn là ' + bmi.toFixed(2) + '. Béo phì.';
+    }
+}
+  </script>
+      </body>
+</html>
